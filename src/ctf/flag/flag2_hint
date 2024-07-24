@@ -1,0 +1,936 @@
+# Section générale
+[general]
+name = MegaApp
+version = 3.0.0
+description = Une application avec une configuration complexe pour des démonstrations étendues
+
+# Section de connexion
+[database]
+host = localhost
+port = 5432
+user = admin
+password = supersecret
+dbname = megaapp_db
+timeout = 30
+
+# Section des utilisateurs
+[users]
+user1 = read,write
+user2 = read
+user3 = admin,write,read
+user4 = read
+user5 = admin
+user6 = read,write
+user7 = write
+user8 = admin
+user9 = read
+user10 = write
+
+# Section des logs
+[logging]
+level = DEBUG
+logfile = /var/log/megaapp.log
+format = "%d{ISO8601} [%t] %-5p %c %x - %m%n"
+log_rotation = daily
+max_size = 100
+
+# Section de sécurité
+[security]
+secret_key = verylongsecretkeythatshouldbechanged
+debug = true
+allowed_ips = 192.168.1.1,192.168.1.2,192.168.1.3,192.168.1.4
+blocked_ips = 10.0.0.1,10.0.0.2,10.0.0.3
+authentication_methods = password,token
+
+# Section des emails
+[mail]
+smtp_server = smtp.example.com
+smtp_port = 587
+smtp_user = mailuser@example.com
+smtp_password = smtpsecret
+from_address = no-reply@example.com
+to_addresses = user1@example.com,user2@example.com,user3@example.com
+default_subject = Notification de MegaApp
+
+# Section des API
+[api]
+api_key = api_key_1234567890
+api_url = https://api.example.com/v1
+api_timeout = 15
+
+# Section des tâches planifiées
+[scheduler]
+task_interval = 30
+tasks = backup,cleanup,report
+[backup]
+enabled = true
+backup_dir = /var/backups/megaapp
+backup_retention = 7
+[cleanup]
+enabled = true
+cleanup_interval = 1
+[report]
+enabled = false
+report_email = report@example.com
+
+# Section des paramètres réseau
+[network]
+interface_ip = 192.168.1.100
+subnet_mask = 255.255.255.0
+gateway = 192.168.1.1
+dns_servers = 8.8.8.8,8.8.4.4
+
+# Section des fonctionnalités avancées
+[features]
+feature_a = true
+feature_b_setting1 = value1
+feature_b_setting2 = value2
+feature_c = false
+
+# Section des options personnalisées
+[custom]
+custom_option1 = value1
+custom_option2 = value2
+custom_option3 = value3
+custom_option4 = value4
+custom_option5 = value5
+custom_option6 = value6
+custom_option7 = value7
+custom_option8 = value8
+custom_option9 = value9
+custom_option10 = value10
+
+# Section des intégrations
+[integrations]
+service_x_enabled = true
+service_x_url = https://servicex.example.com
+service_x_api_key = service_x_key
+service_y_enabled = false
+service_y_url = https://servicey.example.com
+
+# Section des paramètres de performance
+[performance]
+cache_size = 512
+cache_timeout = 3600
+num_threads = 4
+
+# Section des paramètres de stockage
+[storage]
+storage_type = local
+storage_path = /var/storage/megaapp
+max_size = 500
+error_handling = retry
+
+# Section de configuration des API internes
+[internal_api]
+internal_api_key = internal_key_1234567890
+internal_api_url = https://internal.api.example.com/v1
+internal_api_timeout = 10
+
+# Section de configuration des notifications
+[notifications]
+notifications_enabled = true
+notification_channel = email
+notification_email = notify@example.com
+notification_subject = Alerte MegaApp
+
+# Section de gestion des erreurs
+[errors]
+error_logfile = /var/log/megaapp_errors.log
+error_level = ERROR
+error_notifications = true
+
+# Section des ressources
+[resources]
+memory_limit = 1024
+cpu_limit = 75
+disk_limit = 1000
+network_bandwidth = 100
+
+# Section de débogage
+[debug]
+debug_enabled = true
+debug_level = VERBOSE
+debug_logfile = /var/log/megaapp_debug.log
+
+# Section des paramètres de session
+[session]
+session_timeout = 30
+session_storage = cookie
+session_encryption = true
+
+# Section des paramètres d'authentification
+[auth]
+auth_type = token
+auth_key = auth_key_1234567890
+auth_timeout = 3600
+
+# Section des paramètres de maintenance
+[maintenance]
+maintenance_mode = false
+maintenance_message = "Le service est en maintenance. Veuillez revenir plus tard."
+
+# Section des paramètres de sauvegarde
+[backup]
+backup_directory = /var/backups/megaapp
+backup_frequency = daily
+backup_retention = 30
+
+# Section de configuration de l'interface utilisateur
+[ui]
+theme = dark
+language = en
+font_size = 14
+show_toolbar = true
+
+# Section des mises à jour
+[updates]
+auto_update = true
+update_frequency = weekly
+
+# Section des accès
+[access]
+role_based_access = true
+roles = admin,user,guest
+admin_rights = all
+user_rights = read,write
+guest_rights = read
+
+# Section des API externes
+[external_apis]
+payment_api_url = https://payment.example.com/api
+payment_api_key = payment_key_1234567890
+geolocation_api_url = https://geolocation.example.com/api
+geolocation_api_key = geolocation_key_1234567890
+
+# Section des alertes
+[alerts]
+alerts_enabled = true
+alerts = cpu_usage,high_memory,network_errors
+
+# Section des paramètres de session
+[session]
+session_timeout = 20
+session_storage = redis
+
+# Section de gestion des tâches
+[tasks]
+scheduled_tasks = backup,cleanup,report
+backup_task = daily
+cleanup_task = hourly
+report_task = weekly
+
+# Section de configuration des ressources
+[resources]
+memory_limit = 2048
+cpu_limit = 85
+disk_limit = 2000
+network_bandwidth = 200
+
+# Section des paramètres de sécurité
+[security]
+encryption_key = encryption_key_1234567890
+firewall_rules = allow_all
+intrusion_detection = enabled
+
+# Section des paramètres réseau étendus
+[network]
+interface_ip = 192.168.1.201
+subnet_mask = 255.255.255.0
+gateway = 192.168.1.1
+dns_servers = 8.8.8.8,8.8.4.4,1.1.1.1
+
+# Section des configurations supplémentaires
+[additional]
+feature_d = enabled
+feature_e = true
+custom_config1 = extra_value1
+custom_config2 = extra_value2
+
+# Section des tâches avancées
+[advanced_tasks]
+task1 = cleanup
+task2 = report
+task3 = backup
+task4 = analysis
+task5 = monitoring
+
+# Section de configuration des serveurs
+[servers]
+server1 = primary
+server2 = secondary
+server3 = tertiary
+server4 = backup
+
+# Section des alertes avancées
+[advanced_alerts]
+alert_type1 = high_cpu
+alert_type2 = low_memory
+alert_type3 = disk_full
+alert_type4 = network_failure
+
+# Section des règles de routage
+[routing]
+route1 = 192.168.1.0/24 via 192.168.1.1
+route2 = 10.0.0.0/8 via 192.168.1.2
+
+# Section des configurations de cache
+[cache]
+cache_size = 1024
+cache_timeout = 7200
+cache_policy = LRU
+
+# Section des options d'accès
+[access_control]
+admin_users = user1,user2
+regular_users = user3,user4,user5
+guest_users = user6,user7
+
+# Section de configuration des API internes étendues
+[internal_api_extended]
+internal_api_key = internal_key_9876543210
+internal_api_url = https://internal.api.example.com/v2
+internal_api_timeout = 15
+internal_api_rate_limit = 1000
+
+# Section de gestion des ressources étendues
+[extended_resources]
+memory_limit = 4096
+cpu_limit = 90
+disk_limit = 5000
+network_bandwidth = 500
+
+# Section des configurations spécifiques
+[specific_configurations]
+setting1 = value1
+setting2 = value2
+setting3 = value3
+setting4 = value4
+setting5 = value5
+setting6 = value6
+setting7 = value7
+setting8 = value8
+setting9 = value9
+setting10 = value10
+
+# Section des logs avancés
+[advanced_logging]
+log_level = TRACE
+log_file = /var/log/megaapp_advanced.log
+log_format = "%d{ISO8601} [%t] %-5p %c %x - %m%n"
+log_rotation = hourly
+max_log_size = 200
+
+# Section des permissions avancées
+[advanced_permissions]
+permission1 = read,write
+permission2 = execute
+permission3 = admin
+permission4 = none
+
+# Section des paramètres de performance avancés
+[performance_advanced]
+cpu_affinity = 0-3
+memory_allocation = 4096
+disk_io = high
+network_throughput = 1000
+
+# Section des options d'intégration étendues
+[extended_integrations]
+integration1 = service_z
+integration2 = service_w
+integration3 = service_v
+integration4 = service_u
+
+# Section des alertes spécifiques
+[specific_alerts]
+alert1 = disk_usage_high
+alert2 = memory_usage_critical
+alert3 = cpu_usage_critical
+alert4 = network_latency_high
+
+# Section des configurations de session avancées
+[session_advanced]
+session_timeout = 60
+session_encryption = true
+session_storage = distributed
+
+# Section des configurations de mise à jour avancées
+[updates_advanced]
+update_frequency = daily
+update_timeout = 10
+update_channel = stable
+
+# Section de configuration des accès avancés
+[access_advanced]
+role1 = admin
+role2 = user
+role3 = guest
+role4 = external
+
+# Section des configurations de sécurité avancées
+[security_advanced]
+security_level = high
+encryption_method = AES
+firewall_mode = strict
+intrusion_detection_mode = enhanced
+
+# Section des paramètres de notification avancés
+[notifications_advanced]
+notification_method = SMS,email
+notification_priority = high
+notification_recipients = admin@example.com,dev@example.com
+
+# Section des configurations supplémentaires avancées
+[additional_advanced]
+extra_option1 = enabled
+extra_option2 = true
+extra_option3 = value3
+extra_option4 = value4
+
+# Section des ressources de performance
+[performance_resources]
+cpu_allocation = 50%
+memory_allocation = 60%
+disk_allocation = 70%
+network_allocation = 80%
+
+# Section des paramètres réseau étendus
+[extended_network]
+network_interface = eth0
+network_ip = 192.168.1.202
+network_mask = 255.255.255.0
+network_gateway = 192.168.1.1
+network_dns = 8.8.8.8,8.8.4.4
+
+# Section des configurations des serveurs étendues
+[server_configurations]
+server_role = primary
+server_ip = 192.168.1.203
+server_port = 8080
+server_protocol = HTTPS
+
+# Section des paramètres de sauvegarde avancés
+[backup_advanced]
+backup_schedule = hourly
+backup_redundancy = 3
+backup_location = /var/backups/megaapp/advanced
+backup_encryption = true
+
+# Section de gestion des erreurs avancées
+[error_management]
+error_log_file = /var/log/megaapp_error_advanced.log
+error_severity = critical
+error_reporting = true
+
+# Section des configurations spécifiques aux utilisateurs
+[user_specific]
+user1_config = config_value1
+user2_config = config_value2
+user3_config = config_value3
+user4_config = config_value4
+user5_config = config_value5
+user6_config = config_value6
+user7_config = config_value7
+user8_config = config_value8
+user9_config = config_value9
+user10_config = config_value10
+
+# Section de gestion des alertes avancées
+[advanced_alert_management]
+alert_frequency = hourly
+alert_method = email,SMS
+alert_recipient_list = admin@example.com,ops@example.com
+
+# Section des options de débogage avancées
+[debug_advanced]
+debug_level = ALL
+debug_output = console
+debug_file = /var/log/megaapp_debug_advanced.log
+
+# Section des configurations spécifiques aux applications
+[app_configurations]
+app1 = config_value1
+app2 = config_value2
+app3 = config_value3
+app4 = config_value4
+app5 = config_value5
+app6 = config_value6
+app7 = config_value7
+app8 = config_value8
+app9 = config_value9
+app10 = config_value10
+
+# Section de configuration des intégrations avancées
+[advanced_integrations_config]
+integration1 = service_a
+integration2 = service_b
+integration3 = service_c
+integration4 = service_d
+integration5 = service_e
+
+# Section des paramètres de performance de stockage
+[storage_performance]
+storage_type = SSD
+storage_size = 2048
+storage_speed = fast
+storage_redundancy = high
+
+# Section des paramètres de connexion avancés
+[advanced_connection]
+connection_timeout = 20
+connection_retry = 5
+connection_max_attempts = 10
+
+# Section des configurations spécifiques aux serveurs
+[server_specific]
+server_name = main_server
+server_location = data_center_1
+server_status = active
+server_type = primary
+
+# Section de gestion des tâches avancées
+[advanced_task_management]
+task_type1 = monitoring
+task_type2 = analysis
+task_type3 = reporting
+task_type4 = cleanup
+task_type5 = backup
+task_type6 = restoration
+task_type7 = optimization
+task_type8 = scaling
+
+# Section des options de configuration supplémentaires
+[extra_config]
+option1 = value1
+option2 = value2
+option3 = value3
+option4 = value4
+option5 = value5
+option6 = value6
+option7 = value7
+option8 = value8
+option9 = value9
+option10 = value10
+
+# Section des ressources avancées
+[advanced_resources]
+cpu_cores = 8
+memory_size = 8192
+disk_capacity = 4096
+network_speed = 1000
+
+# Section des paramètres de maintenance avancés
+[maintenance_advanced]
+maintenance_mode = periodic
+maintenance_interval = weekly
+maintenance_window = 02:00-04:00
+maintenance_message = "La maintenance planifiée a lieu."
+
+# Section des alertes de performance
+[performance_alerts]
+cpu_usage_high = 85
+memory_usage_high = 75
+disk_space_low = 10
+network_bandwidth_low = 20
+
+# Section des paramètres de sauvegarde spécifiques
+[backup_specific]
+backup_frequency = hourly
+backup_type = incremental
+backup_encryption = true
+backup_compression = true
+
+# Section des configurations de sécurité spécifiques
+[security_specific]
+firewall_rules = allow,deny
+intrusion_detection = active
+encryption_type = AES-256
+
+# Section des configurations des services tiers
+[third_party_services]
+service1 = integration_active
+service2 = integration_inactive
+service3 = integration_active
+
+# Section de gestion des accès avancés
+[advanced_access_control]
+access_level1 = read,write
+access_level2 = admin
+access_level3 = guest
+access_level4 = restricted
+
+# Section de configuration des performances avancées
+[performance_advanced_config]
+cpu_limit = 90
+memory_limit = 8192
+disk_limit = 10000
+network_limit = 2000
+
+# Section de configuration des utilisateurs avancés
+[advanced_users]
+user1_role = admin
+user2_role = user
+user3_role = guest
+user4_role = user
+user5_role = admin
+
+# Section des paramètres réseau supplémentaires
+[additional_network]
+network_mode = DHCP
+network_ip_range = 192.168.1.100-192.168.1.200
+network_subnet = 255.255.255.0
+network_gateway = 192.168.1.1
+
+# Section des paramètres d'intégration étendue
+[extended_integration_config]
+integration1_status = active
+integration2_status = active
+integration3_status = inactive
+integration4_status = active
+integration5_status = inactive
+
+# Section des configurations de sauvegarde étendues
+[extended_backup]
+backup_location = /var/backups/megaapp/extended
+backup_frequency = daily
+backup_encryption = true
+backup_compression = true
+
+# Section des paramètres de sécurité avancés
+[advanced_security]
+security_level = ultra
+firewall_mode = strict
+intrusion_detection_mode = advanced
+encryption_algorithm = RSA-2048
+
+# Section des configurations de performance supplémentaires
+[performance_extra]
+cpu_cores = 16
+memory_size = 16384
+disk_capacity = 8192
+network_speed = 2000
+
+# Section des paramètres de session étendus
+[extended_session]
+session_timeout = 120
+session_storage = distributed
+session_encryption = true
+session_validation = true
+
+# Section des paramètres de débogage avancés
+[advanced_debug]
+debug_mode = true
+debug_level = DEBUG
+debug_output = file
+debug_file_location = /var/log/megaapp_debug_advanced.log
+
+# Section des paramètres de configuration étendus
+[extended_config]
+config_option1 = enabled
+config_option2 = value2
+config_option3 = value3
+config_option4 = value4
+config_option5 = value5
+
+# Section des alertes de sécurité
+[security_alerts]
+alert_critical = true
+alert_high = true
+alert_medium = true
+alert_low = false
+
+# Section des paramètres de sauvegarde avancés
+[backup_advanced_config]
+backup_interval = hourly
+backup_retention = 14
+backup_encryption = true
+backup_compression = true
+
+# Section des paramètres de gestion des erreurs avancés
+[error_management_advanced]
+error_log_level = ERROR
+error_reporting = enabled
+error_alerts = true
+
+# Section des configurations spécifiques étendues
+[specific_extended_config]
+extended_option1 = value1
+extended_option2 = value2
+extended_option3 = value3
+extended_option4 = value4
+extended_option5 = value5
+
+# Section des paramètres de réseau avancés
+[network_advanced]
+network_interface = eth1
+network_ip = 192.168.1.204
+network_mask = 255.255.255.0
+network_gateway = 192.168.1.1
+network_dns = 8.8.8.8,8.8.4.4
+
+# Section des configurations de performance spécifiques
+[performance_specific]
+cpu_allocation = 75%
+memory_allocation = 80%
+disk_allocation = 90%
+network_bandwidth = 1500
+
+# Section des paramètres de sauvegarde spécifique
+[specific_backup]
+backup_schedule = daily
+backup_retention = 7
+backup_location = /var/backups/megaapp/specific
+
+# Section des configurations supplémentaires avancées
+[advanced_extra_config]
+extra_option1 = active
+extra_option2 = true
+extra_option3 = value3
+extra_option4 = value4
+extra_option5 = value5
+extra_option6 = value6
+extra_option7 = value7
+extra_option8 = value8
+extra_option9 = value9
+extra_option10 = value10
+
+# Section des alertes de performance spécifiques
+[performance_specific_alerts]
+alert_type1 = high_cpu_usage
+alert_type2 = low_memory
+alert_type3 = disk_space_critical
+alert_type4 = network_throughput_low
+
+# Section des options de sécurité spécifiques
+[security_specific_options]
+security_policy = strict
+firewall_rules = allow,deny
+intrusion_detection = active
+encryption_type = AES-256
+
+# Section de gestion des tâches avancées
+[advanced_task_management_extended]
+task_type1 = monitoring
+task_type2 = analysis
+task_type3 = reporting
+task_type4 = cleanup
+task_type5 = backup
+task_type6 = restoration
+task_type7 = optimization
+task_type8 = scaling
+task_type9 = auditing
+task_type10 = troubleshooting
+
+# Section de configuration des intégrations spécifiques
+[specific_integrations]
+integration1 = service_f
+integration2 = service_g
+integration3 = service_h
+integration4 = service_i
+integration5 = service_j
+
+# Section des configurations de sécurité avancées
+[advanced_security_config]
+security_level = ultra
+encryption_method = AES-256
+firewall_mode = strict
+intrusion_detection_mode = advanced
+
+# Section des alertes avancées
+[alerts_advanced_config]
+alert_type1 = system_overload
+alert_type2 = high_memory_usage
+alert_type3 = critical_disk_space
+alert_type4 = network_failure
+alert_type5 = unauthorized_access
+alert_type6 = application_error
+
+# Section des configurations des performances
+[performance_config]
+cpu_usage_limit = 85%
+memory_usage_limit = 75%
+disk_usage_limit = 90%
+network_usage_limit = 80%
+
+# Section des configurations des sauvegardes
+[backup_config]
+backup_frequency = daily
+backup_encryption = true
+backup_compression = true
+backup_location = /var/backups/megaapp
+backup_retention_period = 30
+
+# Section des configurations avancées de réseau
+[advanced_network]
+network_mode = static
+network_ip = 192.168.1.205
+network_subnet = 255.255.255.0
+network_gateway = 192.168.1.1
+network_dns = 8.8.8.8,8.8.4.4
+network_bandwidth = 2000
+
+# Section des configurations de tâches spécifiques
+[specific_task_config]
+task1 = data_backup
+task2 = system_cleanup
+task3 = performance_monitoring
+task4 = log_rotation
+task5 = security_scan
+
+# Section des paramètres de performance avancés
+[performance_advanced]
+cpu_cores = 16
+memory_size = 16384
+disk_capacity = 8192
+network_speed = 2000
+
+# Section des alertes de sécurité avancées
+[advanced_security_alerts]
+alert_type1 = critical_security_event
+alert_type2 = high_security_risk
+alert_type3 = medium_security_warning
+alert_type4 = low_security_notice
+
+# Section des options de débogage avancées
+[advanced_debug_options]
+debug_mode = active
+debug_level = VERBOSE
+debug_output = file
+debug_file_path = /var/log/megaapp_debug_extended.log
+
+# Section des configurations spécifiques aux intégrations
+[integration_config]
+integration1 = service_k
+integration2 = service_l
+integration3 = service_m
+integration4 = service_n
+integration5 = service_o
+
+# Section des paramètres de sécurité
+[security_params]
+encryption_key = security_key_1234567890
+firewall_rules = allow,deny
+intrusion_detection = enabled
+
+# Section des paramètres de réseau avancés
+[advanced_network_config]
+network_interface = eth2
+network_ip = 192.168.1.206
+network_mask = 255.255.255.0
+network_gateway = 192.168.1.1
+network_dns = 8.8.8.8,8.8.4.4
+
+# Section des paramètres de performance spécifiques
+[specific_performance]
+cpu_usage_limit = 80%
+memory_usage_limit = 70%
+disk_usage_limit = 85%
+network_usage_limit = 75%
+
+# Section des configurations spécifiques aux sauvegardes
+[backup_specific_config]
+backup_type = incremental
+backup_schedule = weekly
+backup_retention = 14
+backup_location = /var/backups/megaapp/specific
+
+# Section des paramètres de gestion des tâches
+[task_management]
+task1 = monitoring
+task2 = analysis
+task3 = reporting
+task4 = cleanup
+task5 = backup
+task6 = restoration
+task7 = optimization
+task8 = scaling
+task9 = auditing
+task10 = troubleshooting
+
+# Section des alertes avancées
+[advanced_alerts_config]
+alert_type1 = high_system_load
+alert_type2 = low_memory
+alert_type3 = critical_disk_space
+alert_type4 = network_failure
+alert_type5 = unauthorized_access
+alert_type6 = application_error
+alert_type7 = system_reboot
+
+# Section des configurations de sauvegardes
+[backup_config_extended]
+backup_frequency = daily
+backup_encryption = true
+backup_compression = true
+backup_location = /var/backups/megaapp/extended
+backup_retention_period = 30
+
+# Section des configurations de sécurité spécifiques
+[security_specific_config]
+security_policy = high
+firewall_rules = allow,deny
+intrusion_detection = active
+encryption_method = AES-256
+
+# Section des configurations avancées des utilisateurs
+[advanced_user_config]
+user1_permissions = read,write
+user2_permissions = read
+user3_permissions = write,read
+user4_permissions = admin
+user5_permissions = read
+
+# Section des paramètres de sauvegarde avancés
+[advanced_backup_config]
+backup_schedule = hourly
+backup_retention = 14
+backup_encryption = true
+backup_compression = true
+backup_location = /var/backups/megaapp/advanced
+
+# Section des alertes de sécurité spécifiques
+[security_specific_alerts]
+alert_type1 = unauthorized_access
+alert_type2 = data_leakage
+alert_type3 = system_intrusion
+alert_type4 = application_exploit
+
+# Section des paramètres de performance avancés
+[performance_advanced_config]
+cpu_limit = 85%
+memory_limit = 75%
+disk_limit = 90%
+network_limit = 80%
+
+# Section des configurations des serveurs étendues
+[extended_server_config]
+server_name = backup_server
+server_ip = 192.168.1.207
+server_role = secondary
+server_status = standby
+server_type = backup
+
+# Section des alertes de performance avancées
+[performance_advanced_alerts]
+alert_type1 = high_cpu_usage
+alert_type2 = low_memory
+alert_type3 = disk_space_critical
+alert_type4 = network_throughput_low
+alert_type5 = system_overload
+alert_type6 = high_network_latency
+
+# Section des options de configuration supplémentaires
+[additional_advanced_config]
+config_option1 = enabled
+config_option2 = true
+config_option3 = value3
+config_option4 = value4
+config_option5 = value5
+
+# Section des configurations spécifiques de sécurité
+[security_config_extended]
+security_policy = ultra
+firewall_rules = allow,deny
+intrusion_detection = active
+encryption_type = RSA-2048

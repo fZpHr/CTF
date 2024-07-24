@@ -1,0 +1,45 @@
+services:
+  static_web:
+    build: ./src/static_web/.
+    container_name: static_web
+    ports:
+      - "8080"
+    networks:
+      ctf:
+
+  nginx:
+    build: ./src/nginx/.
+    container_name: nginx
+    ports:
+      - "80:80"
+    networks:
+      ctf:
+    depends_on:
+      - static_web
+
+  ctf:
+    build:
+      context: ./src/ctf/.
+      args:
+        ROOT_USER: ${ROOT_USER}
+        ROOT_PASS: ${ROOT_PASS}
+        INTERN_USER: ${INTERN_USER}
+        INTERN_PASS: ${INTERN_PASS}
+    container_name: ctf
+    ports:
+      - "64242:22"
+    env_file:
+      - .env
+    networks:
+      - ctf
+    depends_on:
+      - nginx
+
+networks:
+  ctf:
+    driver: bridge
+
+
+  
+
+    
