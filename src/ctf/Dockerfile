@@ -34,7 +34,7 @@ RUN mkdir /var/run/sshd && \
 RUN echo "${INTERN_USER}:${INTERN_PASS}" | chpasswd
 
 RUN usermod -aG sudo ${INTERN_USER} && \
-    echo "${INTERN_USER} ALL=(ALL) /usr/bin/sudoedit /home/hints/flag2_hint" >> /etc/sudoer
+    echo "${INTERN_USER} ALL=(ALL) /usr/bin/sudoedit /home/hints/flag2_hint" >> /etc/sudoers
 
 RUN mkdir /home/hints && \
     chmod 755 /home/hints && \
