@@ -98,7 +98,7 @@ Le site web contient des informations critiques éparpillées et nécessite l'ut
    Utilisez `Wireshark` pour capturer les requêtes POST envoyées par le script. Configurez Wireshark pour écouter sur l'interface `lo` (loopback) et utilisez un filtre pour capturer les requêtes POST. Recherchez le flag dans les octets des requêtes POST interceptées.
 
 
-# Capture The Flag - Solution
+# La Quête du Stagiaire - Solution
 
 ## Étape 1
 
