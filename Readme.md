@@ -9,6 +9,10 @@ Vous êtes chargé de résoudre un défi de Capture The Flag (CTF) sur un site w
 Le site web contient des informations critiques éparpillées et nécessite l'utilisation d'outils et techniques spécifiques pour découvrir des flags et obtenir des informations sensibles. Suite a cette récolte d'information, vous devrez interagir avec le serveur via SSH, exploiter des failles de configuration, et analyser les requêtes réseau pour réussir.
 
 *Dézippez le fichier et exécutez le script compilé inclus dans l'archive pour le flag 3*
+<details>
+   <summary>Réponse pour dézipper le flag3</summary>
+   Utilisez le flag précédent comme mot de passe pour dézipper le fichier.
+</details><br>
 
 # VERSION NIVEAU MOYEN
 
