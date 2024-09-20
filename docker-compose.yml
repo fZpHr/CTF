@@ -2,8 +2,6 @@ services:
   static_web:
     build: ./src/static_web/.
     container_name: static_web
-    ports:
-      - "8080"
     networks:
       - ctf
 
@@ -11,7 +9,7 @@ services:
     build: ./src/nginx/.
     container_name: nginx
     ports:
-      - "80:80"
+      - "4280:80"
     depends_on:
       - static_web
     networks:

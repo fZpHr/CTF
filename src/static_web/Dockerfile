@@ -6,7 +6,7 @@ RUN apk update && apk upgrade && apk add --update --no-cache nodejs npm && rm -f
 
 RUN npm install -g http-server
 
-COPY conf/login.html conf/intern.html conf/build.html conf/dev.html conf/contact.html conf/services.html conf/about.html conf/index.html conf/static.html conf/doigdrip.jpg conf/wallpaper.png ./
+COPY conf/ ./
 RUN chmod 664 *
 
 CMD ["http-server", "-p", "8080", "-d", "/var/www/"]
