@@ -3,65 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1em;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-        }
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-        }
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-        .content {
-            padding: 20px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <title>Contact · Datalys</title>
+    <meta name="description" content="Contactez les équipes Datalys pour une démo, un devis ou une question.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="theme.js"></script>
 </head>
-<body>
-    <header>
-        <h1>Contactez-nous</h1>
-    </header>
-    <nav>
-        <a href="index">Accueil</a>
-        <a href="about">À propos</a>
-        <a href="services">Services</a>
-        <a href="contact">Contact</a>
-    </nav>
-    <div class="content">
-        <h2>Contact</h2>
-        <p>Si vous avez des questions ou souhaitez en savoir plus sur nos services, n'hésitez pas à nous contacter via le formulaire ci-dessous ou par téléphone.</p>
-    </div>
-    <footer>
-        <p>&copy; 2024 Notre Société. Tous droits réservés.</p>
-    </footer>
+<body data-page="contact">
+    <main>
+        <section class="hero" style="padding:64px 0">
+            <div class="container">
+                <p class="eyebrow" style="color:#7dd3fc">Contact</p>
+                <h1>Parlons de vos données.</h1>
+                <p>Une démo, un devis, une question technique ? On vous répond sous 24 h ouvrées.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container grid grid-2" style="gap:2.5rem;align-items:start">
+                <div>
+                    <h2>Nos coordonnées</h2>
+                    <table class="kv">
+                        <tr><td>Siège</td><td>12 rue de l'Innovation, 16000 Angoulême</td></tr>
+                        <tr><td>Bureau Paris</td><td>8 boulevard de la Data, 75010 Paris</td></tr>
+                        <tr><td>Commercial</td><td><a href="mailto:contact@datalys.fr">contact@datalys.fr</a></td></tr>
+                        <tr><td>Support</td><td><a href="mailto:support@datalys.fr">support@datalys.fr</a></td></tr>
+                        <tr><td>Téléphone</td><td>01 23 45 67 89</td></tr>
+                    </table>
+                    <p class="muted" style="margin-top:1rem">Du lundi au vendredi, 9 h – 18 h. Support plateforme 24/7 pour les clients sous contrat.</p>
+                </div>
+                <div class="card form-card" style="max-width:none">
+                    <h2 style="margin-top:0">Écrivez-nous</h2>
+                    <p id="contactMsg" class="msg"></p>
+                    <form id="contactForm" action="/contact" method="post">
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="email">E-mail professionnel</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="subject">Sujet</label>
+                        <select id="subject" name="subject">
+                            <option>Demande de démo</option>
+                            <option>Devis</option>
+                            <option>Question technique</option>
+                            <option>Candidature</option>
+                        </select>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                        <button class="btn btn-primary" type="submit">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="partials.js"></script>
+    <script>
+        (function () {
+            var f = document.getElementById('contactForm');
+            var m = document.getElementById('contactMsg');
+            f.addEventListener('submit', function (e) {
+                e.preventDefault();
+                f.style.display = 'none';
+                m.className = 'msg ok';
+                m.textContent = "✅ Votre message a bien été transmis. Merci ! Redirection vers l'accueil…";
+                setTimeout(function () { window.location.href = 'index'; }, 2200);
+            });
+        })();
+    </script>
 </body>
 </html>

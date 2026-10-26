@@ -1,19 +1,23 @@
 services:
   static_web:
     build: ./src/static_web/.
-    container_name: static_web
     networks:
-      - ctf
+      - stagiaire
+
+  auth:
+    build: ./src/auth/.
+    networks:
+      - stagiaire
 
   nginx:
     build: ./src/nginx/.
-    container_name: nginx
     ports:
-      - "4280:80"
+      - "${PORT_STAGIAIRE_HTTP}:80"
     depends_on:
       - static_web
+      - auth
     networks:
-      - ctf
+      - stagiaire
 
   ctf:
     build:
@@ -23,18 +27,28 @@ services:
         ROOT_PASS: ${ROOT_PASS}
         INTERN_USER: ${INTERN_USER}
         INTERN_PASS: ${INTERN_PASS}
-    container_name: ctf
     ports:
-      - "64242:22"
+      - "${PORT_STAGIAIRE_SSH}:22"
     env_file:
       - .env
     depends_on:
       - nginx
     networks:
+      - stagiaire
+
+  # Agent de telemetrie : partage la netns de 'ctf' (meme 'lo', donc le
+  # heartbeat 127.0.0.1:8080 reste capturable via tcpdump depuis ctf), mais
+  # tourne dans une PID/mount namespace separee -> un root dans 'ctf' ne peut
+  # ni le voir (ps), ni l'attacher (ltrace/strace/gdb). Seule la capture
+  # reseau permet de recuperer les identifiants en clair.
+  telemetry:
+    build: ./src/telemetry/.
+    network_mode: "service:ctf"
+    depends_on:
       - ctf
 
 networks:
-  ctf:
+  stagiaire:
     driver: bridge
 
 

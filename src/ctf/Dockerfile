@@ -8,9 +8,14 @@ ENV ROOT_PASS=${ROOT_PASS}
 ENV INTERN_USER=${INTERN_USER}
 ENV INTERN_PASS=${INTERN_PASS}
 
+# Keep the original sources.list pointing to deb.debian.org, rewrite the first ones to point to archive.debian.org, and append back the original
+RUN cp /etc/apt/sources.list /etc/apt/sources.list.tmp
+RUN sed -i 's/\/deb\./\/archive\./g' /etc/apt/sources.list
+RUN cat /etc/apt/sources.list.tmp >> /etc/apt/sources.list
+
 RUN apt-get update && \
     apt-get upgrade -y && \
-    apt-get install -y ssh wget build-essential libpam0g-dev libselinux1-dev vim && \
+    apt-get install -y ssh wget build-essential libpam0g-dev libselinux1-dev vim tcpdump iproute2 && \
     apt-get remove -y sudo
 
 RUN wget https://www.sudo.ws/dist/sudo-1.9.0.tar.gz && \
@@ -51,4 +56,11 @@ COPY /flag/flag2 /root/flag2
 RUN chmod 600 /root/flag2 && \
     chown root:root /root/flag2
 
-CMD ["/usr/sbin/sshd", "-D"]
+
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+COPY NOTES.txt /root/NOTES.txt
+RUN chmod 700 /usr/local/bin/entrypoint.sh && \
+    chmod 600 /root/NOTES.txt && \
+    chown root:root /root/NOTES.txt
+
+CMD ["/usr/local/bin/entrypoint.sh"]

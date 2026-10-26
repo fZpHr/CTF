@@ -3,69 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        header {
-            background-color: #FF9800;
-            color: white;
-            padding: 1em;
-            text-align: center;
-        }
-        .content {
-            max-width: 800px;
-            margin: 5% auto;
-            padding: 2em;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <title>Support · Datalys</title>
+    <meta name="description" content="Centre d'aide, support e-mail, téléphone et chat pour les clients Datalys.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="theme.js"></script>
 </head>
-<body>
-    <header>
-        <h1>Support</h1>
-    </header>
-    <div class="content">
-        <h2>Assistance</h2>
-        <p>Si vous avez besoin d'aide, veuillez consulter notre centre de support ou contacter notre équipe d'assistance.</p>
-        
-        <h3>Centre de Support</h3>
-        <p>Visitez notre <a href="https://www.google.com/search?q=centre+de+support">centre de support</a> pour trouver des articles d'aide, des FAQ et des guides d'utilisation.</p>
-        
-        <h3>Support par Email</h3>
-        <p>Envoyez-nous un email à <a href="mailto:support@notresociete.com">support@notresociete.com</a> et nous vous répondrons dans les plus brefs délais.</p>
-        
-        <h3>Support Téléphonique</h3>
-        <p>Appelez notre équipe d'assistance au 01 23 45 67 89 pour une aide immédiate. Notre support téléphonique est disponible 24/7.</p>
-        
-        <h3>Chat en Direct</h3>
-        <p>Utilisez notre <a href="https://www.google.com/search?q=chat+en+direct+support">chat en direct</a> pour parler avec un de nos agents de support en temps réel.</p>
-        
-        <h3>Support sur les Réseaux Sociaux</h3>
-        <p>Suivez-nous sur les réseaux sociaux et envoyez-nous un message direct pour obtenir de l'aide :</p>
-        <ul>
-            <li><a href="https://www.facebook.com">Facebook</a></li>
-            <li><a href="https://www.twitter.com">Twitter</a></li>
-            <li><a href="https://www.linkedin.com">LinkedIn</a></li>
-        </ul>
-    </div>
-    <footer>
-        <p>&copy; 2024 Notre Société. Tous droits réservés.</p>
-    </footer>
+<body data-page="support">
+    <main>
+        <section class="hero" style="padding:64px 0">
+            <div class="container">
+                <p class="eyebrow" style="color:#7dd3fc">Support</p>
+                <h1>On ne vous laisse jamais seul·e.</h1>
+                <p>Une équipe d'assistance joignable et une base de connaissances complète pour garder vos tableaux de bord au vert.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="grid grid-3">
+                    <div class="card">
+                        <h3>Centre d'aide</h3>
+                        <p>Articles, guides et FAQ pour prendre la plateforme en main. <a href="faq">Consulter la FAQ</a></p>
+                    </div>
+                    <div class="card">
+                        <h3>Support e-mail</h3>
+                        <p>Écrivez à <a href="mailto:support@datalys.fr">support@datalys.fr</a>, réponse sous 4 h ouvrées.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Support téléphonique</h3>
+                        <p>Au 01 23 45 67 89. Assistance 24/7 pour les clients sous contrat Premium.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Chat en direct</h3>
+                        <p>Depuis votre <a href="login">espace client</a>, discutez avec un agent en temps réel.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Statut des services</h3>
+                        <p>Suivez la disponibilité de la plateforme en temps réel. <a href="build">Voir le statut</a></p>
+                    </div>
+                    <div class="card">
+                        <h3>Réseaux sociaux</h3>
+                        <p><a href="https://www.linkedin.com">LinkedIn</a> · <a href="https://www.twitter.com">X</a> · <a href="https://www.facebook.com">Facebook</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="partials.js"></script>
 </body>
 </html>

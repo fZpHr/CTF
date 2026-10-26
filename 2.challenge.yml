@@ -1,0 +1,20 @@
+name: '[★★☆] Le-Stagiaire · 2. Escalade'
+author: hbelle
+category: network
+description: |
+  Vous voilà sur le serveur de **Datalys**, un fichier vous nargue, hors de portée...
+
+  ----
+  Escalade de privilèges
+value: 250
+type: dynamic
+extra:
+  initial: 250
+  decay: 15
+  minimum: 125
+flags:
+- "FLAG{Pas_mal_finalement_les_updates...!?}"
+state: visible
+connection_info: http://${CHAL_HOST}:${PORT_STAGIAIRE_HTTP}
+requirements:
+- '[★☆☆] Le-Stagiaire · 1. Accès'

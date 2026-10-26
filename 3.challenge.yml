@@ -1,0 +1,20 @@
+name: '[★★★] Le-Stagiaire · 3. Réseau'
+author: hbelle
+category: network
+description: |
+  Root sur la machine de **Datalys**, mais la quête n'est pas finie, quelque chose bavarde un peu trop...
+
+  ----
+  Réseau
+value: 350
+type: dynamic
+extra:
+  initial: 350
+  decay: 15
+  minimum: 175
+flags:
+- "FLAG{Mais_oui_c'est_clair!}"
+state: visible
+connection_info: http://${CHAL_HOST}:${PORT_STAGIAIRE_HTTP}
+requirements:
+- '[★★☆] Le-Stagiaire · 2. Escalade'

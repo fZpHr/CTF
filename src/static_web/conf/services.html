@@ -3,86 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1em;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-        }
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-        }
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-        .content {
-            padding: 20px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <title>Services · Datalys</title>
+    <meta name="description" content="Conseil, intégration, développement sur mesure, formation et sécurité : Datalys vous accompagne sur tout le cycle de la donnée.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="theme.js"></script>
 </head>
-<body>
-    <header>
-        <h1>Nos Services</h1>
-    </header>
-    <nav>
-        <a href="index">Accueil</a>
-        <a href="about">À propos</a>
-        <a href="services">Services</a>
-        <a href="contact">Contact</a>
-    </nav>
-    <div class="content">
-        <h2>Services</h2>
-        <p>Nous offrons une variété de services pour répondre à vos besoins. Que ce soit pour des consultations, des solutions techniques, ou des formations, nous sommes là pour vous aider.</p>
-        
-        <h3>Consultation</h3>
-        <p>Nos experts sont disponibles pour des consultations personnalisées afin de vous aider à résoudre vos défis techniques et stratégiques.</p>
-        
-        <h3>Développement de logiciels</h3>
-        <p>Nous offrons des services de développement de logiciels sur mesure pour répondre aux besoins spécifiques de votre entreprise.</p>
-        
-        <h3>Formation</h3>
-        <p>Nous proposons des formations sur divers sujets techniques pour aider vos équipes à rester à jour avec les dernières technologies.</p>
-        
-        <h3>Support technique</h3>
-        <p>Notre équipe de support technique est disponible 24/7 pour vous aider avec tout problème technique que vous pourriez rencontrer.</p>
-        
-        <h3>Audit de sécurité</h3>
-        <p>Nous réalisons des audits de sécurité complets pour identifier et corriger les vulnérabilités dans vos systèmes.</p>
-        
-        <h3>Migration vers le cloud</h3>
-        <p>Nous vous aidons à migrer vos applications et données vers le cloud de manière sécurisée et efficace.</p>
-        
-        <h3>Optimisation des performances</h3>
-        <p>Nos services d'optimisation des performances visent à améliorer la vitesse et l'efficacité de vos systèmes existants.</p>
-    </div>
-    <footer>
-        <p>&copy; 2024 Notre Société. Tous droits réservés.</p>
-    </footer>
+<body data-page="services">
+    <main>
+        <section class="hero" style="padding:72px 0">
+            <div class="container">
+                <p class="eyebrow" style="color:#7dd3fc">Services</p>
+                <h1>De vos données brutes à des décisions nettes.</h1>
+                <p>Nous intervenons sur toute la chaîne : cadrer le besoin, brancher les sources, construire les tableaux de bord, former vos équipes et sécuriser l'ensemble.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="grid grid-3">
+                    <div class="card">
+                        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v4M5 7l2.5 2.5M19 7l-2.5 2.5"/><circle cx="12" cy="14" r="6"/></svg></div>
+                        <h3>Conseil &amp; stratégie data</h3>
+                        <p>Nous cadrons vos cas d'usage prioritaires et bâtissons une feuille de route data réaliste et rentable.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div>
+                        <h3>Intégration &amp; pipelines</h3>
+                        <p>Connexion de vos bases SQL, API et fichiers, nettoyage et modélisation pour une source unique et fiable.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></div>
+                        <h3>Tableaux de bord sur mesure</h3>
+                        <p>Des dashboards clairs et interactifs, pensés avec vos équipes métier et adoptés dès le premier jour.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3"/></svg></div>
+                        <h3>Développement logiciel</h3>
+                        <p>Applications data sur mesure et connecteurs spécifiques quand votre contexte sort des sentiers battus.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+                        <h3>Audit de sécurité</h3>
+                        <p>Revue de vos accès, de vos flux et de vos configurations pour identifier et corriger les vulnérabilités.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M8 13h8M8 17h5"/></svg></div>
+                        <h3>Formation &amp; support</h3>
+                        <p>Formations sur site ou à distance, et une équipe support joignable pour garder vos équipes autonomes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="surface">
+            <div class="container center">
+                <div class="section-head center">
+                    <h2>Un besoin précis en tête ?</h2>
+                    <p class="lead">Décrivez-le nous, on revient vers vous sous 24 h ouvrées.</p>
+                </div>
+                <a class="btn btn-primary" href="contact">Demander un devis</a>
+            </div>
+        </section>
+    </main>
+    <script src="partials.js"></script>
 </body>
 </html>

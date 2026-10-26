@@ -1,0 +1,3 @@
+OPS-4280 (interne)
+------------------
+A FAIRE : migrer l'agent de telemetrie (datalys-telemetry) vers HTTPS.

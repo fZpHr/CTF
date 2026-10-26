@@ -3,65 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À propos</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1em;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-        }
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-        }
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-        .content {
-            padding: 20px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <title>À propos · Datalys</title>
+    <meta name="description" content="Depuis 2003, Datalys aide les entreprises à prendre de meilleures décisions grâce à leurs données.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="theme.js"></script>
 </head>
-<body>
-    <header>
-        <h1>À propos de nous</h1>
-    </header>
-    <nav>
-        <a href="index">Accueil</a>
-        <a href="about">À propos</a>
-        <a href="services">Services</a>
-        <a href="contact">Contact</a>
-    </nav>
-    <div class="content">
-        <h2>À propos</h2>
-        <p>Nous sommes une entreprise dédiée à fournir les meilleurs services à nos clients. Notre équipe est composée de professionnels expérimentés dans divers domaines.</p>
-    </div>
-    <footer>
-        <p>&copy; 2024 Notre Société. Tous droits réservés.</p>
-    </footer>
+<body data-page="about">
+    <main>
+        <section class="hero" style="padding:72px 0">
+            <div class="container">
+                <p class="eyebrow" style="color:#7dd3fc">À propos</p>
+                <h1>La donnée au service de la décision, depuis 2003.</h1>
+                <p>Datalys est née d'une conviction simple : une entreprise ne manque pas de données, elle manque de clarté. Vingt ans plus tard, nous aidons 340 organisations à transformer leurs chiffres en décisions.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container grid grid-2" style="align-items:center;gap:2.5rem">
+                <div>
+                    <p class="eyebrow">Notre mission</p>
+                    <h2>Rendre la donnée utile à tout le monde</h2>
+                    <p>Nous concevons une plateforme et des méthodes pour que la donnée ne reste pas l'affaire des seuls experts. Un dirigeant, un responsable d'équipe ou un analyste doivent pouvoir obtenir la bonne réponse, au bon moment, sans dépendre de personne.</p>
+                    <p>Nos équipes réunissent ingénieurs data, designers et consultants métier, en France, autour d'un même objectif : la clarté.</p>
+                </div>
+                <div class="grid grid-2" style="gap:1rem">
+                    <div class="card"><h3>Clarté</h3><p class="muted">Un chiffre qui ne se comprend pas ne sert à rien.</p></div>
+                    <div class="card"><h3>Souveraineté</h3><p class="muted">Vos données restent les vôtres, hébergées en France.</p></div>
+                    <div class="card"><h3>Rigueur</h3><p class="muted">Une seule source de vérité, vérifiable et traçable.</p></div>
+                    <div class="card"><h3>Autonomie</h3><p class="muted">On vous forme, vous n'êtes jamais prisonniers de l'outil.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="surface">
+            <div class="container">
+                <div class="section-head center">
+                    <p class="eyebrow">Notre histoire</p>
+                    <h2>Vingt ans, quelques étapes</h2>
+                </div>
+                <div class="grid grid-4">
+                    <div class="card"><h3>2003</h3><p class="muted">Création à Angoulême. Premiers tableaux de bord sur mesure.</p></div>
+                    <div class="card"><h3>2011</h3><p class="muted">Lancement de la plateforme Datalys Cloud.</p></div>
+                    <div class="card"><h3>2018</h3><p class="muted">Certification hébergement de données sensibles.</p></div>
+                    <div class="card"><h3>2026</h3><p class="muted">380 clients, des bureaux à Paris et Angoulême, 140 collaborateurs.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container center">
+                <div class="section-head center">
+                    <h2>Envie d'en savoir plus ?</h2>
+                    <p class="lead">Rencontrons-nous. On vous montre la plateforme sur vos propres données.</p>
+                </div>
+                <a class="btn btn-primary" href="contact">Nous contacter</a>
+            </div>
+        </section>
+    </main>
+    <script src="partials.js"></script>
 </body>
 </html>

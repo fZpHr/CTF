@@ -1,0 +1,18 @@
+name: '[★☆☆] Le-Stagiaire · 1. Accès'
+author: hbelle
+category: network
+description: |
+  Bienvenue chez **Datalys**, un stagiaire vient d'arriver, explorez le site, recollez les informations éparpillées...
+
+  ----
+  Reconnaissance web
+value: 150
+type: dynamic
+extra:
+  initial: 150
+  decay: 15
+  minimum: 75
+flags:
+- "FLAG{Pas_mal_pour_un_stagiaire_...}"
+state: visible
+connection_info: http://${CHAL_HOST}:${PORT_STAGIAIRE_HTTP}

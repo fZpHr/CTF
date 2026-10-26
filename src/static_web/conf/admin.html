@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Console d'administration · Datalys</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="theme.js"></script>
+    <style>
+        body { background:
+            radial-gradient(700px 400px at 80% -10%, rgba(6,182,212,.18), transparent 60%),
+            linear-gradient(160deg, var(--navy), var(--navy-2));
+            min-height: 100vh; }
+        .admin-shell { width: 100%; max-width: 420px; margin: 0 auto; padding: 72px 20px; }
+        .admin-card { background: var(--surface); border-radius: var(--radius); padding: 2rem; box-shadow: var(--shadow-lg); }
+        .admin-badge { display:inline-flex; align-items:center; gap:.4rem; font-size:.74rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--warn); background:#fff7ed; border:1px solid #fed7aa; padding:.3rem .7rem; border-radius:999px; }
+    </style>
+</head>
+<body>
+    <div class="admin-shell">
+        <div class="admin-card">
+            <div style="text-align:center;margin-bottom:1.2rem">
+                <svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true" style="width:40px;height:40px;display:block;margin:0 auto .6rem">
+                    <rect width="32" height="32" rx="8" fill="#0b1b34"/>
+                    <path d="M16 8l7 3v4c0 4-3 6.5-7 8-4-1.5-7-4-7-8v-4z" fill="none" stroke="#06b6d4" stroke-width="1.6"/>
+                    <path d="M12.7 15.6l2.2 2.2 4.4-4.6" fill="none" stroke="#9ad5ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="admin-badge">Zone réservée</span>
+                <h2 style="margin:.7rem 0 .2rem">Console d'administration</h2>
+                <p class="muted" style="margin:0;font-size:.9rem">Accès strictement contrôlé · toute tentative est journalisée</p>
+            </div>
+
+            <p id="msg" class="msg"></p>
+
+            <form id="adminForm" autocomplete="off">
+                <label for="user">Identifiant administrateur</label>
+                <input type="text" id="user" name="user" required>
+                <label for="pass">Mot de passe</label>
+                <input type="password" id="pass" name="pass" required>
+                <button class="btn btn-primary" type="submit" style="width:100%;justify-content:center">Accéder à la console</button>
+            </form>
+
+            <p class="muted" style="text-align:center;margin:1.2rem 0 0;font-size:.85rem">
+                <a href="index">← Retour au site</a>
+            </p>
+        </div>
+        <!-- TODO(sysadmin): migrer l'auth admin vers le nouveau SSO avant la mise en prod. Pour l'instant, rien derrière ce formulaire. -->
+    </div>
+
+    <script src="prank.js"></script>
+    <script>
+        DatalysPrank.attach(document.getElementById('adminForm'), {
+            endpoint: '/api/login', msgSel: '#msg', userSel: '#user', passSel: '#pass'
+        });
+    </script>
+</body>
+</html>

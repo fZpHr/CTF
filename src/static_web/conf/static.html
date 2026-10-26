@@ -1,31 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:)</title>
     <style>
+        html, body { margin: 0; height: 100%; overflow: hidden; }
         #background {
-            position: absolute;
-            width: 100%;
-            height: 100%;
+            position: absolute; inset: 0;
             background-image: url('wallpaper.png');
             background-size: auto;
             background-repeat: repeat;
             background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            display: flex; justify-content: center; align-items: center;
         }
-        #movingImage {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 150px;
-            height: 150px;
-        }
+        #movingImage { position: absolute; top: 0; left: 0; width: 150px; height: 150px; }
         #centerText {
-            position: absolute;
-            font-size: 3em;
-            color: rgb(255, 255, 255);
-            text-align: center;
+            position: absolute; font-size: 3em; color: #fff; text-align: center;
+            font-family: Arial, sans-serif; text-shadow: 0 2px 12px rgba(0,0,0,.6);
+            padding: 0 1rem;
         }
     </style>
 </head>
@@ -40,36 +33,21 @@
     </div>
     <script>
         var img = document.getElementById('movingImage');
-        var dx = 5;
-        var dy = 5;
+        var dx = 5, dy = 5;
 
         function moveImage() {
-            var x = img.offsetLeft;
-            var y = img.offsetTop;
-
-            if (x + dx > window.innerWidth - img.width || x + dx < 0) {
-                dx = -dx;
-            }
-            if (y + dy > window.innerHeight - img.height || y + dy < 0) {
-                dy = -dy;
-            }
-
+            var x = img.offsetLeft, y = img.offsetTop;
+            if (x + dx > window.innerWidth - img.width || x + dx < 0) dx = -dx;
+            if (y + dy > window.innerHeight - img.height || y + dy < 0) dy = -dy;
             img.style.left = x + dx + 'px';
             img.style.top = y + dy + 'px';
-
             requestAnimationFrame(moveImage);
         }
-
-        img.addEventListener('mouseover', function() {
-            var x = Math.random() * (window.innerWidth - img.width);
-            var y = Math.random() * (window.innerHeight - img.height);
-            img.style.left = x + 'px';
-            img.style.top = y + 'px';
+        img.addEventListener('mouseover', function () {
+            img.style.left = Math.random() * (window.innerWidth - img.width) + 'px';
+            img.style.top = Math.random() * (window.innerHeight - img.height) + 'px';
         });
-
-        window.onload = function() {
-            moveImage();
-        };
+        window.onload = moveImage;
     </script>
 </body>
 </html>

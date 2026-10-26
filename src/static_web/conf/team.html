@@ -3,102 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Équipe</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        header {
-            background-color: #FF5722;
-            color: white;
-            padding: 1em;
-            text-align: center;
-        }
-        .content {
-            max-width: 800px;
-            margin: 5% auto;
-            padding: 2em;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .team-member {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1.5em;
-        }
-        .team-member img {
-            border-radius: 50%;
-            margin-right: 1em;
-            width: 80px;
-            height: 80px;
-        }
-        .team-member h3 {
-            margin: 0;
-        }
-        .team-member p {
-            margin: 0.5em 0 0;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <title>Équipe · Datalys</title>
+    <meta name="description" content="Rencontrez l'équipe de direction de Datalys.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="theme.js"></script>
 </head>
-<body>
-    <header>
-        <h1>Notre Équipe</h1>
-    </header>
-    <div class="content">
-        <h2>Rencontrez notre équipe</h2>
-        <p>Nous avons une équipe diversifiée et talentueuse dédiée à fournir les meilleurs services à nos clients.</p>
-        
-        <div class="team-member">
-            <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Photo de Jean Dupont">
-            <div>
-                <h3>Jean Dupont</h3>
-                <p>CEO</p>
-                <p>Jean est le fondateur de notre société et possède plus de 20 ans d'expérience dans le secteur.</p>
+<body data-page="team">
+    <main>
+        <section class="hero" style="padding:72px 0">
+            <div class="container">
+                <p class="eyebrow" style="color:#7dd3fc">Équipe</p>
+                <h1>Des gens qui aiment la donnée bien faite.</h1>
+                <p>120 collaborateurs entre Angoulême et Paris : ingénieurs data, designers, consultants et un stagiaire motivé.</p>
             </div>
-        </div>
-        
-        <div class="team-member">
-            <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Photo de Marie Curie">
-            <div>
-                <h3>Marie Curie</h3>
-                <p>CTO</p>
-                <p>Marie dirige notre équipe technique avec une expertise approfondie en développement logiciel et en IA.</p>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="section-head"><h2>Direction</h2></div>
+                <div class="grid grid-4">
+                    <div class="card member">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Portrait de Jean Dupont">
+                        <h3>Jean Dupont</h3>
+                        <p class="role">Président &amp; fondateur</p>
+                        <p class="muted">Plus de 20 ans dans la data. A fondé Datalys en 2003.</p>
+                    </div>
+                    <div class="card member">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Portrait de Marie Lefevre">
+                        <h3>Marie Lefèvre</h3>
+                        <p class="role">Directrice technique</p>
+                        <p class="muted">Pilote la plateforme et l'équipe d'ingénierie data.</p>
+                    </div>
+                    <div class="card member">
+                        <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Portrait de Pierre Martin">
+                        <h3>Pierre Martin</h3>
+                        <p class="role">Directeur des opérations</p>
+                        <p class="muted">Garant de la qualité de service et des délais.</p>
+                    </div>
+                    <div class="card member">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Portrait de Sophie Dubois">
+                        <h3>Sophie Dubois</h3>
+                        <p class="role">Directrice marketing</p>
+                        <p class="muted">Responsable de la marque et de la croissance.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        
-        <div class="team-member">
-            <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Photo de Pierre Martin">
-            <div>
-                <h3>Pierre Martin</h3>
-                <p>COO</p>
-                <p>Pierre supervise les opérations quotidiennes et assure l'efficacité de nos processus internes.</p>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="section-head"><h2>Ils nous ont rejoints</h2></div>
+                <div class="grid grid-4">
+                    <div class="card member">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Portrait de Zack Eph">
+                        <h3>Zack Eph</h3>
+                        <p class="role">Stagiaire · Admin systèmes &amp; data</p>
+                        <p class="muted">Arrivé cette semaine, encadré par Pierre Martin. Bienvenue à bord !</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        
-        <div class="team-member">
-            <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Photo de Sophie Dubois">
-            <div>
-                <h3>Sophie Dubois</h3>
-                <p>CMO</p>
-                <p>Sophie est responsable de notre stratégie marketing et de la croissance de notre marque.</p>
+        </section>
+
+        <section class="surface">
+            <div class="container center">
+                <div class="section-head center">
+                    <h2>On recrute</h2>
+                    <p class="lead">Data, dev, sécurité, design : nos postes ouverts n'attendent que vous.</p>
+                </div>
+                <a class="btn btn-primary" href="careers">Voir les offres</a>
             </div>
-        </div>
-    </div>
-    <footer>
-        <p>&copy; 2024 Notre Société. Tous droits réservés.</p>
-    </footer>
+        </section>
+    </main>
+    <script src="partials.js"></script>
 </body>
 </html>

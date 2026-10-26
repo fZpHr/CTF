@@ -1,0 +1,12 @@
+# Datalys — robots.txt
+# Merci de ne pas indexer les espaces privés.
+
+User-agent: *
+Disallow: /admin
+Disallow: /backup.html
+Disallow: /flag.txt
+Disallow: /private/
+Disallow: /config.old
+Disallow: /.git/
+
+# Rien d'intéressant par ici, promis.

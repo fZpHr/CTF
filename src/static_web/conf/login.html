@@ -3,86 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connexion</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1em;
-            text-align: center;
-        }
-        .login-container {
-            max-width: 400px;
-            margin: 5% auto;
-            padding: 2em;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .login-container h2 {
-            margin-bottom: 1em;
-            text-align: center;
-        }
-        .login-container label {
-            display: block;
-            margin-bottom: 0.5em;
-        }
-        .login-container input[type="text"],
-        .login-container input[type="password"] {
-            width: 100%;
-            padding: 0.75em;
-            margin-bottom: 1em;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        .login-container button {
-            width: 100%;
-            padding: 0.75em;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-size: 1em;
-            cursor: pointer;
-        }
-        .login-container button:hover {
-            background-color: #45a049;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <title>Espace client · Datalys</title>
+    <meta name="description" content="Connectez-vous à votre espace client Datalys.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="theme.js"></script>
 </head>
-<body>
-    <header>
-        <h1>Connexion</h1>
-    </header>
-    <div class="login-container">
-        <h2>Connectez-vous</h2>
-        <form action="/login" method="post">
-            <label for="username">Nom d'utilisateur</label>
-            <input type="text" id="username" name="username" required>
-
-            <label for="password">Mot de passe</label>
-            <input type="password" id="password" name="password" required>
-
-            <button type="submit">Se connecter</button>
-        </form>
-    </div>
-    <footer>
-        <p>&copy; 2024 Notre Société. Tous droits réservés.</p>
-    </footer>
+<body data-page="">
+    <main>
+        <section style="padding:72px 0">
+            <div class="container">
+                <div class="card form-card">
+                    <div style="text-align:center;margin-bottom:1.4rem">
+                        <svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true" style="width:42px;height:42px;margin:0 auto .6rem">
+                            <rect width="32" height="32" rx="8" fill="#2563eb"/>
+                            <rect x="8" y="16" width="4" height="8" rx="1" fill="#ffffff"/>
+                            <rect x="14" y="11" width="4" height="13" rx="1" fill="#9ad5ff"/>
+                            <rect x="20" y="7" width="4" height="17" rx="1" fill="#06b6d4"/>
+                        </svg>
+                        <h2 style="margin:0">Espace client</h2>
+                        <p class="muted" style="margin:.3rem 0 0">Accédez à vos tableaux de bord Datalys.</p>
+                    </div>
+                    <p id="loginMsg" class="msg"></p>
+                    <form id="loginForm" action="/login" method="post">
+                        <label for="username">Identifiant</label>
+                        <input type="text" id="username" name="username" autocomplete="username" required>
+                        <label for="password">Mot de passe</label>
+                        <input type="password" id="password" name="password" autocomplete="current-password" required>
+                        <button class="btn btn-primary" type="submit">Se connecter</button>
+                    </form>
+                    <p class="muted" style="text-align:center;margin:1rem 0 0;font-size:.9rem">
+                        <a href="build">Mot de passe oublié ?</a> · <a href="contact">Besoin d'un accès ?</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="partials.js"></script>
+    <script src="prank.js"></script>
+    <script>
+        DatalysPrank.attach(document.getElementById('loginForm'), {
+            flow: 'login', msgSel: '#loginMsg', userSel: '#username', passSel: '#password'
+        });
+    </script>
 </body>
 </html>

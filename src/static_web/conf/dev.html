@@ -3,73 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Développeurs</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1em;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-        }
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-        }
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-        .content {
-            padding: 20px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <title>Développeurs · Datalys</title>
+    <meta name="description" content="Documentation API, SDK et exemples pour intégrer Datalys à vos applications.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="theme.js"></script>
 </head>
-<body>
-    <header>
-        <h1>Ressources pour Développeurs</h1>
-    </header>
-    <nav>
-        <a href="index">Accueil</a>
-        <a href="about">À propos</a>
-        <a href="services">Services</a>
-        <a href="contact">Contact</a>
-        <a href="developers">Développeurs</a>
-    </nav>
-    <div class="content">
-        <h2>Développeurs</h2>
-        <p>Bienvenue dans la section dédiée aux développeurs. Ici, vous trouverez des ressources, des tutoriels et des outils pour vous aider dans vos projets de développement.</p>
-        <h3>Ressources</h3>
-        <ul>
-            <li><a href="#">Documentation API</a></li>
-            <li><a href="#">Exemples de code</a></li>
-            <li><a href="#">Tutoriels</a></li>
-            <li><a href="#">Forum de discussion</a></li>
-        </ul>
-    </div>
-    <footer>
-        <p>&copy; 2024 Notre Société. Tous droits réservés.</p>
-    </footer>
+<body data-page="">
+    <main>
+        <section class="hero" style="padding:64px 0">
+            <div class="container">
+                <p class="eyebrow" style="color:#7dd3fc">Développeurs</p>
+                <h1>Branchez Datalys à tout votre écosystème.</h1>
+                <p>Une API REST documentée, des SDK et des webhooks pour pousser vos données et récupérer vos résultats.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container grid grid-2" style="gap:2.5rem;align-items:start">
+                <div>
+                    <h2>Démarrage rapide</h2>
+                    <p>Authentifiez-vous avec votre clé d'API puis interrogez vos jeux de données.</p>
+                    <div class="card" style="background:var(--navy);color:#dbe7ff;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.9rem;overflow:auto">
+curl -X POST https://api.datalys.fr/v1/datasets \<br>
+&nbsp;&nbsp;-H "Authorization: Bearer $DATALYS_TOKEN" \<br>
+&nbsp;&nbsp;-H "Content-Type: application/json" \<br>
+&nbsp;&nbsp;-d '{ "name": "ventes_2026", "source": "sql" }'
+                    </div>
+                </div>
+                <div>
+                    <h2>Ressources</h2>
+                    <div class="grid" style="gap:.8rem">
+                        <div class="card"><h3>Documentation API</h3><p class="muted">Référence complète des endpoints v1.</p></div>
+                        <div class="card"><h3>Exemples de code</h3><p class="muted">Python, Node.js, Go, prêts à copier.</p></div>
+                        <div class="card"><h3>SDK &amp; CLI</h3><p class="muted">Intégrez Datalys à vos pipelines CI/CD.</p></div>
+                        <div class="card"><h3>Forum développeurs</h3><p class="muted">Posez vos questions à la communauté.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="partials.js"></script>
 </body>
 </html>

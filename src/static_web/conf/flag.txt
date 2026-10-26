@@ -1,0 +1,11 @@
+Sérieusement ? Un fichier /flag.txt référencé dans robots.txt ?
+
+FLAG{trop_beau_pour_etre_vrai_retourne_enumerer}
+
+Les vrais flags ne se ramassent pas à la pelle à la racine du serveur.
+Ce challenge se gagne en réseau : recon → accès → escalade de privilèges.
+
+(Indice gratuit, le seul vrai de ce fichier : le stagiaire a laissé traîner
+ bien plus que des fichiers texte. Regardez du côté des pages, pas des pièges.)
+
+                              — L'équipe Datalys 🙂

@@ -3,65 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1em;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-        }
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-        }
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-        .content {
-            padding: 20px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <title>Datalys · La donnée, enfin lisible</title>
+    <meta name="description" content="Datalys transforme vos données en décisions : plateforme d'analyse, de visualisation et de pilotage pour les entreprises.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="theme.js"></script>
 </head>
-<body>
-    <header>
-        <h1>Bienvenue sur notre site</h1>
-    </header>
-    <nav>
-        <a href="index">Accueil</a>
-        <a href="about">À propos</a>
-        <a href="services">Services</a>
-        <a href="contact">Contact</a>
-    </nav>
-    <div class="content">
-        <h2>Accueil</h2>
-        <p>Bienvenue sur notre site web. Nous sommes heureux de vous voir ici. Explorez nos services et apprenez-en plus sur ce que nous faisons.</p>
-    </div>
-    <footer>
-        <p>&copy; 2024 Notre Société. Tous droits réservés.</p>
-    </footer>
+<body data-page="index">
+    <main>
+        <section class="hero">
+            <div class="container">
+                <p class="eyebrow" style="color:#7dd3fc">Plateforme data &amp; analytics</p>
+                <h1>La donnée de votre entreprise, enfin lisible.</h1>
+                <p>Datalys centralise, analyse et met en scène vos données pour que chaque équipe décide vite, et bien. Des tableaux de bord clairs, des rapports automatisés, une seule source de vérité.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="contact">Demander une démo</a>
+                    <a class="btn btn-light" href="services">Découvrir la plateforme</a>
+                </div>
+                <div class="hero-badges">
+                    <span>✓ Hébergement souverain en France</span>
+                    <span>✓ Connecteurs SQL, API &amp; fichiers</span>
+                    <span>✓ Déploiement en moins de 48 h</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="container">
+                <div class="grid grid-4">
+                    <div class="stat"><b>+20 ans</b><span>d'expertise data</span></div>
+                    <div class="stat"><b>340+</b><span>clients accompagnés</span></div>
+                    <div class="stat"><b>12 Mds</b><span>d'événements traités / mois</span></div>
+                    <div class="stat"><b>99,95 %</b><span>de disponibilité</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="section-head center">
+                    <p class="eyebrow">Ce que fait Datalys</p>
+                    <h2>Une plateforme, tout le cycle de la donnée</h2>
+                    <p class="lead">De la collecte à la décision, sans jongler entre dix outils.</p>
+                </div>
+                <div class="grid grid-3">
+                    <div class="card">
+                        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></div>
+                        <h3>Collecte &amp; intégration</h3>
+                        <p>Connectez vos bases SQL, vos API et vos fichiers en quelques clics. Les données sont nettoyées et unifiées automatiquement.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></div>
+                        <h3>Visualisation</h3>
+                        <p>Des tableaux de bord interactifs, lisibles sur tous les écrans, que vos équipes construisent sans écrire une ligne de code.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/><path d="M9 21h6"/></svg></div>
+                        <h3>Analyse augmentée</h3>
+                        <p>Détection d'anomalies, prévisions et alertes automatiques pour anticiper au lieu de subir.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v12H4z"/><path d="M8 20h8M12 16v4"/><path d="M8 8l3 3 5-5"/></svg></div>
+                        <h3>Rapports automatisés</h3>
+                        <p>Vos rapports clés générés et envoyés chaque matin, au bon format, aux bonnes personnes.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+                        <h3>Gouvernance &amp; sécurité</h3>
+                        <p>Rôles, permissions fines et traçabilité complète. Vos données restent chez vous, chiffrées de bout en bout.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 17l6-6 4 4 6-8"/><path d="M4 21h16"/></svg></div>
+                        <h3>Accompagnement</h3>
+                        <p>Nos consultants vous forment et co-construisent vos premiers tableaux de bord. Vous êtes autonomes en quelques semaines.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="surface">
+            <div class="container center">
+                <div class="section-head center">
+                    <h2>Prêt à y voir clair ?</h2>
+                    <p class="lead">Rejoignez les équipes qui pilotent leur activité avec Datalys.</p>
+                </div>
+                <a class="btn btn-primary" href="contact">Parler à un expert</a>
+            </div>
+        </section>
+    </main>
+    <script src="partials.js"></script>
 </body>
 </html>

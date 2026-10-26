@@ -3,120 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Première Semaine de Stage - Zack Eph</title>
+    <meta name="robots" content="noindex, nofollow">
+    <title>Intranet Datalys · Onboarding stagiaire</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="theme.js"></script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
+        .intranet-bar {
+            background: var(--navy); color: #cfe0fb;
+            border-bottom: 1px solid rgba(255,255,255,.1);
         }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            margin-top: 0;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            padding: 10px 0;
-            border-bottom: 1px solid #ddd;
-        }
-        li:last-child {
-            border-bottom: none;
-        }
-        .notes, .updates, .documents {
-            margin-top: 20px;
-        }
-        .notes h2, .updates h2, .documents h2 {
-            border-bottom: 2px solid #4CAF50;
-            padding-bottom: 10px;
-            margin-bottom: 10px;
-        }
-        .note-item, .update-item {
-            margin-bottom: 10px;
-        }
-        .note-item p, .update-item p {
-            margin: 0;
-        }
+        .intranet-bar .container { display: flex; align-items: center; gap: .6rem; height: 52px; font-size: .9rem; }
+        .intranet-bar .brand-name { color: #fff; }
+        .intranet-bar .pill { margin-left: auto; background: rgba(255,255,255,.12); color: #fff; padding: .25rem .7rem; border-radius: 999px; font-size: .78rem; }
+        .onboard-head { background: var(--surface-2); border-bottom: 1px solid var(--border); padding: 32px 0; }
+        .checklist li { margin-bottom: .6rem; }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Première Semaine de Stage - Zack Eph</h1>
-    </header>
-    <div class="container">
-        <section class="tasks">
-            <h2>Activités de la Première Semaine</h2>
-            <ul>
-                <li><strong>Activité 1 :</strong> Revue des projets en cours avec votre tuteur pour comprendre les objectifs et les attentes.</li>
-                <li><strong>Activité 2 :</strong> Participer à des sessions de formation sur les outils internes et les meilleures pratiques de l'équipe.</li>
-                <li><strong>Activité 3 :</strong> Effectuer des tâches pratiques assignées par votre tuteur pour commencer à contribuer aux projets.</li>
-                <li><strong>Activité 4 :</strong> Assister à des réunions d'équipe pour vous familiariser avec les membres de l'équipe et les projets en cours.</li>
-                <li><strong>Activité 5 :</strong> Recevoir des retours réguliers sur votre travail pour ajuster vos objectifs et améliorer vos compétences.</li>
-                <li><strong>Activité 6 :</strong> Définir un plan de développement personnel avec votre tuteur pour vos prochaines semaines de stage.</li>
-            </ul>
-        </section>
-        <section class="notes">
-            <h2>Notes Importantes</h2>
-            <div class="note-item">
-                <p><strong>Note 1 :</strong> Vérifiez vos emails et votre calendrier pour les mises à jour et les invitations aux réunions.</p>
-            </div>
-            <div class="note-item">
-                <p><strong>Note 2 :</strong> Communiquez régulièrement avec votre tuteur pour clarifier les attentes et obtenir des conseils.</p>
-            </div>
-            <div class="note-item">
-                <p><strong>Note 3 :</strong> Prenez des notes sur les processus et les outils pour vous aider à vous adapter plus rapidement.</p>
-            </div>
-        </section>
-        <section class="updates">
-            <h2>Mises à Jour</h2>
-            <div class="update-item">
-                <p><strong>Mise à jour 1 :</strong> Votre accès SSH a été configuré. Utilisez la première lettre de votre prénom suivie de votre nom complet pour le nom d'utilisateur, et votre date de naissance comme mot de passe initial.</p>
-            </div>
-            <div class="update-item">
-                <p><strong>Mise à jour 2 :</strong> La formation sur les outils internes a été déplacée au mardi à 10h.</p>
-            </div>
-            <div class="update-item">
-                <p><strong>Mise à jour 3 :</strong> La réunion d'équipe de jeudi a été avancée à 15h.</p>
-            </div>
-        </section>
-        <section class="documents">
-            <h2>Documents à Fournir</h2>
-            <div class="update-item">
-                <p><strong>Adresse Postale :</strong> Merci de fournir ton adresse postale complète pour l'envoi de tout matériel nécessaire.</p>
-            </div>
-            <div class="update-item">
-                <p><strong>Numéro de Sécurité Sociale :</strong> Veuillez envoyer une copie de ton numéro de sécurité sociale pour les dossiers administratifs.</p>
-            </div>
-            <div class="update-item">
-                <p><strong>Certificat de Vaccination :</strong> Une copie de ton certificat de vaccination est requise pour respecter les exigences sanitaires de l'entreprise.</p>
-            </div>
-            <div class="update-item">
-                <p><strong>Coordonnées d'Urgence :</strong> Fournissez les coordonnées d'une personne à contacter en cas d'urgence.</p>
-            </div>
-            <div class="update-item">
-                <p><strong>Numéro de Téléphone Personnel :</strong> Nous avons besoin de ton numéro de téléphone personnel pour les communications urgentes.</p>
-            </div>
-            <div class="update-item">
-                <p><strong>Date de Naissance :</strong> Merci de confirmer la date de naissance précédemment envoyée : <strong>1995-06-15</strong>.</p>
-            </div>
-        </section>
+    <div class="intranet-bar">
+        <div class="container">
+            <svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true" style="width:24px;height:24px">
+                <rect width="32" height="32" rx="8" fill="#2563eb"/>
+                <rect x="8" y="16" width="4" height="8" rx="1" fill="#ffffff"/>
+                <rect x="14" y="11" width="4" height="13" rx="1" fill="#9ad5ff"/>
+                <rect x="20" y="7" width="4" height="17" rx="1" fill="#06b6d4"/>
+            </svg>
+            <span class="brand-name" style="font-weight:700">Datalys · Intranet</span>
+            <span class="pill">Accès interne</span>
+        </div>
     </div>
+
+    <div class="onboard-head">
+        <div class="container">
+            <p class="eyebrow" style="margin-bottom:.4rem">Espace RH · Onboarding</p>
+            <h1 style="font-size:1.9rem;margin:0">Première semaine de stage</h1>
+            <p class="muted" style="margin:.4rem 0 0">Poste : Stagiaire administration systèmes &amp; data · Tuteur : M. Martin</p>
+        </div>
+    </div>
+
+    <main class="container" style="padding:36px 0 64px;max-width:900px">
+        <h2>Activités de la première semaine</h2>
+        <ul class="checklist">
+            <li>Revue des projets en cours avec votre tuteur pour comprendre les objectifs et les attentes.</li>
+            <li>Sessions de formation sur les outils internes et les bonnes pratiques de l'équipe.</li>
+            <li>Tâches pratiques assignées par votre tuteur pour commencer à contribuer aux projets.</li>
+            <li>Réunions d'équipe pour vous familiariser avec les membres et les projets en cours.</li>
+            <li>Retours réguliers sur votre travail pour ajuster vos objectifs.</li>
+            <li>Plan de développement personnel défini avec votre tuteur.</li>
+        </ul>
+
+        <h2 style="margin-top:2rem">Notes importantes</h2>
+        <div class="card" style="margin-bottom:1rem"><p style="margin:0"><strong>Note 1 :</strong> Vérifiez vos e-mails et votre calendrier pour les mises à jour et invitations aux réunions.</p></div>
+        <div class="card" style="margin-bottom:1rem"><p style="margin:0"><strong>Note 2 :</strong> Communiquez régulièrement avec votre tuteur pour clarifier les attentes.</p></div>
+        <div class="card"><p style="margin:0"><strong>Note 3 :</strong> Prenez des notes sur les processus et les outils pour vous adapter plus vite.</p></div>
+
+        <h2 style="margin-top:2rem">Mises à jour</h2>
+        <div class="notice">
+            <strong>Mise à jour 1 · Accès SSH :</strong> votre accès a été configuré. Nom d'utilisateur : la première lettre de votre prénom suivie de votre nom complet. Mot de passe initial : votre date de naissance, au format AAAA-MM-JJ.
+        </div>
+        <div class="notice">
+            <strong>Mise à jour 2 :</strong> La formation sur les outils internes a été déplacée au mardi à 10 h.
+        </div>
+        <div class="notice">
+            <strong>Mise à jour 3 :</strong> La réunion d'équipe de jeudi a été avancée à 15 h.
+        </div>
+
+        <h2 style="margin-top:2rem">Votre fiche RH (pré-remplie)</h2>
+        <table class="kv">
+            <tr><td>Service</td><td>Infrastructure &amp; Data</td></tr>
+            <tr><td>Tuteur</td><td>Pierre Martin</td></tr>
+            <tr><td>Date d'arrivée</td><td>Cette semaine</td></tr>
+            <tr><td>Date de naissance</td><td>15 juin 1995</td></tr>
+        </table>
+
+        <h2 style="margin-top:2rem">Documents à fournir</h2>
+        <table class="kv">
+            <tr><td>Adresse postale</td><td>Merci de fournir votre adresse postale complète pour l'envoi du matériel.</td></tr>
+            <tr><td>Numéro de sécurité sociale</td><td>Copie à transmettre pour les dossiers administratifs.</td></tr>
+            <tr><td>Certificat de vaccination</td><td>Copie requise pour les exigences sanitaires de l'entreprise.</td></tr>
+            <tr><td>Coordonnées d'urgence</td><td>Personne à contacter en cas d'urgence.</td></tr>
+            <tr><td>Numéro de téléphone personnel</td><td>Pour les communications urgentes.</td></tr>
+        </table>
+
+        <p class="muted" style="margin-top:2rem;font-size:.85rem">Document interne Datalys, ne pas diffuser à l'extérieur de l'entreprise.</p>
+    </main>
 </body>
 </html>
