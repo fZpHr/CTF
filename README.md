@@ -64,7 +64,7 @@ Même contexte que ci-dessus. Trois flags jalonnent le parcours.
 
 1. Une fois **root**, un service tourne en permanence et envoie un *heartbeat*
    d'authentification **en HTTP clair** sur la boucle locale.
-   <details><summary>Indice</summary>`/root/NOTES.txt`, `ps aux`, ou `ss -tlnp` → quelque chose écoute sur `127.0.0.1:8080`.</details>
+   <details><summary>Indice</summary>`/root/NOTES.txt` ou `ss -tlnp` → quelque chose écoute sur `127.0.0.1:8080`. Inutile de chercher le process (`ps`) ou de le tracer (`ltrace`/`strace`) : seul le trafic est observable.</details>
 
 2. Capturez cette trame (Wireshark/tcpdump sur `lo`) pour récupérer les
    identifiants de la **console d'administration**, puis connectez-vous sur
@@ -186,8 +186,12 @@ Même contexte. Version très guidée.
 1. **Indice (root)**
    ```bash
    cat /root/NOTES.txt      # l'agent de télémétrie envoie le heartbeat admin EN CLAIR sur :8080
-   ss -tlnp | grep 8080     # un service écoute sur 127.0.0.1:8080
+   ss -tlnp | grep 8080     # un service écoute sur 127.0.0.1:8080 (colonne PID vide : process hors de ce conteneur)
    ```
+   > L'agent tourne dans un conteneur séparé (`telemetry`) qui partage uniquement
+   > la *network namespace* de `ctf`. Le heartbeat est donc capturable sur `lo`,
+   > mais le process et le binaire sont hors de portée : `ltrace`/`strace`/`gdb`
+   > ne mènent à rien, la **capture réseau est le seul chemin**.
 
 2. **Capture de la trame**
    ```bash
@@ -211,14 +215,15 @@ Même contexte. Version très guidée.
 
 ## Infrastructure 
 
-Quatre conteneurs sur le réseau `stagiaire` :
+Cinq conteneurs sur le réseau `stagiaire` :
 
 | Service | Rôle |
 | --- | --- |
 | `static_web` | site statique (http-server) |
 | `auth` | backend du login `/admin` (valide les creds → renvoie flag3) |
 | `nginx` | reverse-proxy (`/api/login` → `auth`, le reste → `static_web`) |
-| `ctf` | SSH + sudo 1.9.0 vulnérable + agent de télémétrie |
+| `ctf` | SSH + sudo 1.9.0 vulnérable (cible de P1/P2) |
+| `telemetry` | agent de télémétrie (heartbeat admin en clair) ; `network_mode: service:ctf` → partage la netns de `ctf`, mais PID/mount isolés |
 
 Démarrage :
 ```bash
