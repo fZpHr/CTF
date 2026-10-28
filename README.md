@@ -1,16 +1,25 @@
-# VERSION NIVEAU DIFFICILE
+<div align="center">
 
-<!-- HEADER:auto -->
 | Category | Level | Points | Author |
-| --- | --- | --- | --- |
+| :---: | :---: | :---: | :---: |
 | forensics | Easy ★☆☆ | 150 | hbelle |
 | privilege escalation | Medium ★★☆ | 250 | hbelle |
 | network | Hard ★★★ | 350 | hbelle |
 
+</div>
 <!-- /HEADER:auto -->
 
 ![Site vitrine de Datalys](assets/datalys-site.png)
 
+
+<br>
+
+
+
+
+# VERSION NIVEAU DIFFICILE
+
+<!-- HEADER:auto -->
 # Sujet CTF - "La Quête du Stagiaire"
 
 ## Contexte
